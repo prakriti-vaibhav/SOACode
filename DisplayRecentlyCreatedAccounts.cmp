@@ -1,0 +1,10 @@
+<aura:component controller="LightningHelperController" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="accountList" type="account[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />  
+    <center><h1><b>List of recently created Accounts</b></h1></center>
+     <aura:iteration items="{!v.accountList}" var="accs">
+         <ul>            
+             <li>{!accs.Name}</li>
+         </ul>
+    </aura:iteration>
+</aura:component>
